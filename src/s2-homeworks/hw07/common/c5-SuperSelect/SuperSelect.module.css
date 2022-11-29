@@ -1,0 +1,23 @@
+.select {
+
+    width: 150px;
+    height: 30px;
+    border-radius:2px;
+    outline: none;
+    border: 0.5px solid dimgray;
+    cursor: pointer;
+    color: #9a9898;
+}
+
+.select:focus {
+
+
+}
+
+.option{
+
+    border-radius: 2px;
+}
+.option:hover {
+
+}
