@@ -1,15 +1,17 @@
 
 export type TypeInitialState={
-    theme:string
+    themeId:number
 }
 
 const initState:TypeInitialState = {
-    theme: '1',
+    themeId: 1,
 }
 
 type TypeChangeThemeId = {
     type: 'SET_THEME_ID'
-    theme: string
+    id: number
+
+
 }
 
 
@@ -18,7 +20,7 @@ export const themeReducer = (state = initState, action: TypeChangeThemeId): Type
         case "SET_THEME_ID": {
             return {
                 ...state,
-                theme: action.theme
+                themeId: action.id
             }
         }
         default:
@@ -26,4 +28,4 @@ export const themeReducer = (state = initState, action: TypeChangeThemeId): Type
     }
 }
 
-export const changeThemeId = (theme: string): TypeChangeThemeId => ({type: 'SET_THEME_ID', theme}) // fix any
+export const changeThemeId = (id: number): TypeChangeThemeId => ({type: 'SET_THEME_ID', id}) // fix any
